@@ -30,6 +30,25 @@ div {
 }
 ```
 
+### 绝对定位+ margin:auto 实现水平居中，垂直居中布局
+
+布局实例： http://jsfiddle.net/01527xba/31/
+
+1. 为了启用绝对定位，先将父元素设置为相当定位。
+
+2. 元素设置类似如下属性
+
+```
+  margin:auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom:0;
+  right: 0;
+  width:160px;
+  max-height:50px;
+```
+
 ### 块元素水平居中新手法: transform
 
 可以通过如下属性实现块级元素及内联块级元素的水平居中。
