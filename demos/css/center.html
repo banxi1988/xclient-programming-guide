@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CSS 示例 模板文件</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./playground.css">
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="whiteboard">
+    <h1 class="title">CSS 与居中</h1>
+    <section>
+      <h3 class="section-header">text-align:center; 控制行内元素居中</h3>
+      <div class="section-body">
+        <p class="border-red" style="text-align: center">
+          CSS 权威指南
+        </p>
+        <p class="border-red" style="text-align: center">
+          <span class="code">CSS</span> 权威指南
+        </p>
+        <p class="border-red" style="text-align: center">
+          <div class="code" style="display: inline-block;">CSS</div>
+          权威指南,当有行内块级元素时会破坏此居中对齐。
+        </p>
+      </div>
+    </section>
+    <section>
+      <h3 class="section-header"> 使用 line-height 实现行内元素实现垂直居中</h3>
+      <div class="section-body">
+        <div class="primary-button">一个按钮</div>
+        <div class="primary-button"> <span>另一个按钮</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="section-header"> 使用 margin: Xpx auto; 实现块级水平居中效果</h3>
+      <div class="section-body">
+        <div class="border-red">
+          <div class="code-box" style="margin:10px auto;display: block; width:160px;">margin:10px auto;</div>
+        </div>
+        <div class="border-red" style="height: 80px;">
+          <div class="code-box" style="margin:auto auto;display: block; width:160px;height: 46px;">margin:auto auto; 无法实现垂直居中</div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="section-header"> 使用 transform 实现居中效果:适用 block 及 inline-block块级元素</h3>
+      <div class="section-body">
+        <div class="border-red">
+          <div class="code-box" style="margin-left:50%; transform:translateX(-50%); ">
+            margin-left:50%; transform:translateX(-50%);
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="section-header"> 使用 Flex 实现居中效果</h3>
+      <div class="section-body">
+        <p>
+          <div class="base-button flexbox flex-center"> <span>有 span 包装</span></div>
+        </p>
+        <p>
+          <div class="base-button flexbox flex-center">
+            <div>有 div 包装</div>
+          </div>
+        </p>
+        <p>
+          <div class="base-button flexbox flex-center"> 没有子元素包装</div>
+        </p>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
